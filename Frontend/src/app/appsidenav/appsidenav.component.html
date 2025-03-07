@@ -1,0 +1,28 @@
+<nav *ngIf="!isCurrentPageLogin()">
+    <div class="sidebar">
+        <div class="menu">
+          <a routerLink="/dashboard" class="b1">
+            <img *ngIf="!Dashboard" src="/assets/img/Dashboard.svg" alt="">
+            <img *ngIf="Dashboard" src="/assets/img/Dashboard-active.svg" alt="">
+          </a>
+      
+          <a routerLink="/list" class="b2">
+            <img *ngIf="!ListProject" src="/assets/img/Project-list.svg" alt="">
+            <img *ngIf="ListProject" src="/assets/img/Project-list-active.svg" alt="">
+          </a>
+      
+          <a routerLink="/add" class="b3">
+            <img *ngIf="!AddProject" src="/assets/img/create-project.svg" alt="">
+            <img *ngIf="AddProject" src="/assets/img/create-project-active.svg" alt="">
+          </a>
+        </div>
+        <div class="login">
+          <a routerLink="/logout">
+            <img src="/assets/img/Logout.svg" alt="">
+          </a>
+        </div>
+      </div>
+      </nav>
+
+
+

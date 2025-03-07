@@ -1,0 +1,82 @@
+
+<header > 
+  <div class="bgimg">
+    <a routerLink="/dashboard" style="color: white; margin-left: 30px;"> < Project Listing </a>
+  <img src="/assets/img/Logo (1).svg" alt="">
+</div>
+
+</header>
+
+<div class="con">
+<div class="search">
+<input type="text" [(ngModel)]="searchText" (input)="onSearch()" placeholder="Enter search text">
+</div>
+
+<div class="sorting">
+  <label for="sortSelect">Sort By:</label><br class="b">
+  <select id="sortSelect" (change)="onSort($event)">
+    <option *ngFor="let option of sortOptions" [value]="option.value">{{ option.label }}</option>
+  </select>
+</div>
+
+<div>
+<table>
+    <thead>
+    <th colspan="3" >Project Name</th>
+    <th>Reason</th>
+    <th>Type</th>
+    <th>Division</th>
+    <th>Category</th>
+    <th>Priority</th>
+    <th>Department</th>
+    <th>Location</th>
+    <th>Status</th>
+    <th></th>
+    
+    </thead>
+<tbody *ngFor="
+let i of projects
+| paginate
+: {
+    itemsPerPage: tableSize,
+    currentPage: page,
+    totalItems: count
+  };
+let io = index
+" class="border">
+       <tr>
+        <td colspan="3" id="pname" class="Fistcol" >{{i.pname}}<br>{{i.start_date}} to {{i.end_date}}</td>
+  
+        <td class="common" id="reason" data-label="Reason: ">{{i.reason}}</td>
+        <td class="common" id="type" data-label="Type: ">{{i.type}}</td>
+        <td class="common" id="division" data-label="Division: ">{{i.division}}</td>
+        <td class="common" id="category" data-label="*Category: ">{{i.category}}</td>
+        <td class="common" id="priority" data-label="Priority: ">{{i.priority}}</td>
+        <td class="common" id="department" data-label="*Department: ">{{i.department}}</td>
+        <td class="common" id="location" data-label="Location:">{{i.location}}</td>
+      
+        <td class="status" id="status">{{i.status}}</td>
+        <td class="statusButton">
+            <button (click)="updateStatus(i.pid, 'Running')"  class="button1" >Start</button>
+            <button (click)="updateStatus(i.pid, 'Closed')" class="button2">Close</button>
+            <button (click)="updateStatus(i.pid, 'Cancelled')" class="button3">Cancel</button>
+          </td>
+        </tr>
+    
+</tbody>
+
+</table>
+</div>
+
+<div class="d-flex justify-content-center">
+  <pagination-controls
+  previousLabel="Prev"
+  nextLabel="Next"
+  (pageChange)="onTableDataChange($event)"
+  
+></pagination-controls>
+
+</div>
+
+</div>
+

@@ -1,0 +1,41 @@
+<body >
+  <div class="login-container" >
+    <div class="logo">
+      <img src="/assets/img/Logo%20(1).svg" alt=""><br>
+      <div class="title">
+      <strong style="color: rgb(203 213 225);">Online Project Management</strong>
+    </div>
+    </div>
+      <div class="login-page">
+        <div class="form">
+          <div class="login">
+            <div class="login-header">
+              
+              <p>Login to get started.</p>
+            </div>
+          </div>
+          
+          <form class="login-form" name="logFrm" #logFrm="ngForm" (ngSubmit)="log()" novalidate="">
+            <label class="inputLabel" for="email">UserName</label><br>
+            <input type="email" placeholder="username" id="email" name="email" [(ngModel)]="logObj.email" #email="ngModel" class="css-input" required>
+            <div *ngIf="email.touched && email.invalid">
+              <span class="msg" class="text-danger" *ngIf="email.errors?.['required']">Username is required.</span>
+            </div>
+          
+            <label class="inputLabel" for="pass">Password</label><br>
+            <input type="password" placeholder="password" id="pass" name="password" [(ngModel)]="logObj.password" #password="ngModel" class="css-input" required>
+            <div  *ngIf="password.touched && password.invalid">
+              <span class="msg" class="text-danger" *ngIf="password.errors?.['required']">Password is required.</span>
+              
+            </div>
+            <p class="message"><a href="#">Forgot Password</a></p>
+           <button  value="Login" class="btn">Login</button>
+           <div>
+           
+          </div>
+          </form>
+          <span style="color: #dc3545;">{{msg}}</span>
+        </div>
+      </div>
+    </div>
+  </body>

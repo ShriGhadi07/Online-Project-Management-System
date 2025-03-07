@@ -1,0 +1,98 @@
+
+<header > 
+  <div class="bgimg">
+    <a routerLink="/dashboard" style="color: white; margin-left: 30px;"> < Create Project </a>
+  <img src="/assets/img/Logo (1).svg" alt="">
+</div>
+</header>
+
+
+<form name="frmReg" #frmReg="ngForm" (ngSubmit)="save()" class="form">
+
+  <button type="submit" [disabled]="frmReg.invalid" id="submit" class="btn btn-primary btn-lg"  style="float: right; margin-top: 10px; margin-right: 10px;">Save Project</button>
+
+
+  <div class="frm1">
+      <div class="fi">  
+      <div class="row">
+        <div class="col" class="inp">
+        <label class="lb">Project Name</label>
+        <input type="text" name="pname" [(ngModel)]="regTech.pname" #pname="ngModel" id="pname" class="form-control" required>
+        <div *ngIf="pname.touched && pname.invalid">
+          <span class="msg" class="text-danger" *ngIf="pname.errors?.['required']">Project name is required.</span>
+        </div>
+        
+      </div>
+      </div>
+    </div>
+    
+    <br>
+<div class="row">
+        <div class="col">
+                <label for="reason" class="lb">Reason</label>
+                <select name="reason" id="reason" [(ngModel)]="regTech.reason" #reason="ngModel" (change)="selectReason" class="form-control" required>
+                  <option *ngFor="let r of Reason" [value]="r.value">{{ r.label }}</option>
+                </select>
+        </div><br>
+        <div class="col">
+                <label for="type" class="lb">Type</label>
+                <select name="type" id="type" [(ngModel)]="regTech.type" #type="ngModel" class="form-control" required>
+                  <option *ngFor="let t of Type" [value]="t.value">{{ t.label }}</option>
+                </select>
+        </div><br>
+        <div class="col">
+                <label for="division" class="lb">Division</label>
+                <select name="division" id="division" [(ngModel)]="regTech.division" #division="ngModel" class="form-control" required>
+                  <option *ngFor="let d of Division" [value]="d.value">{{ d.label }}</option>
+                </select>
+        </div>
+</div><br>
+
+<div class="row">
+           <div class="col">
+                <label for="category" class="lb">Category</label>
+                <select name="category" id="category" [(ngModel)]="regTech.category" #category="ngModel" class="form-control" required> 
+                  <option *ngFor="let c of Category" [value]="c.value">{{ c.label }}</option>
+                </select>
+           </div><br>
+        
+           <div class="col">
+                <label for="priority" class="lb">Priority</label>
+                <select name="priority" id="priority" [(ngModel)]="regTech.priority" #priority="ngModel" class="form-control" required>
+                  <option *ngFor="let p of Priority" [value]="p.value">{{ p.label }}</option>
+                </select>
+           </div><br>
+
+           <div class="col">
+                <label for="department" class="lb">Department</label>
+                <select name="department" id="department" [(ngModel)]="regTech.department" #department="ngModel" class="form-control" required>
+                  <option *ngFor="let d of Department" [value]="d.value">{{ d.label }}</option>
+                </select>
+           </div>
+</div><br>
+
+<div class="row">
+  <div class="col">
+        <label class="lb">Start_Date</label>
+        <input type="date" name="start_date" [(ngModel)]="regTech.start_date" #start_date="ngModel"  class="form-control" required>
+  </div><br>
+  <div class="col">
+        <label class="lb">End_Date</label>
+        <input type="date" name="end_date" [(ngModel)]="regTech.end_date" #end_date="ngModel"  class="form-control" required>
+        <span class="text-danger">{{msg}}</span>
+  </div><br>
+  <div class="col">
+                <label for="location" class="lb">Location</label>
+                <select name="location" id="location" [(ngModel)]="regTech.location" #location="ngModel" class="form-control" required>
+                  <option *ngFor="let l of Location" [value]="l.value">{{ l.label }}</option>
+                </select>
+  </div>
+</div><br>
+
+<div class="sta">
+        <label for="status" class="lb" aria-required="true">Status:</label>
+        <b> Registerd</b> 
+</div>     
+</div>
+
+</form>

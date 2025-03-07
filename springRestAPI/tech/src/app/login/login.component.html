@@ -1,0 +1,10 @@
+<p>login works!</p>
+
+<h1>Admin Login</h1>
+<form name="logFrm" #logFrm="ngForm" (ngSubmit)="log()" novalidate="">
+    <label for="">Username</label><br>
+    <input type="text" name="user" [(ngModel)]="logObj.user" #user="ngModel"><br>
+    <label for="">Password</label><br>
+    <input type="password" name="pass" [(ngModel)]="logObj.pass" #pass="ngModel"><br>
+    <input type="submit" value="Login" [disabled]="logFrm.invalid">
+</form>

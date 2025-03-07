@@ -1,0 +1,135 @@
+
+
+/* Additional CSS to style rectangular boxes */
+.box-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    bottom: 35px;
+  }
+  
+  .box {
+    width: 200px;
+    height: 75px;
+    background-color: #f0f0f0;
+    border: 0px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #0dcaf0;
+  }
+  
+  .box p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .box h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+header{
+    z-index: -5;
+}
+
+.bgimg{
+    background-image: url("/assets/img/Header-bg.svg");
+    height: 135px;
+    align-items: center;
+    z-index: -5;
+}
+
+img{
+    padding-left: 527px;
+    padding-top: 20px;
+}
+
+.chart{
+  border: 2px solid #f3f8fb;
+  background-color: transparent;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 448px;
+    position: absolute;
+    top:208px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.chart1{
+  border: 2px solid;
+  
+}
+
+
+.h5{
+  
+  margin-left: 20px;
+}
+
+.title{
+  margin-right: 20px;
+  margin-left: 67%;
+  width: 15%;
+  margin-top: 12%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+  header{
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  
+
+  .box-container {
+    /* align-items: center; */
+    overflow-x: scroll;
+    /* overflow-y: hidden; */
+    display: -webkit-inline-box;
+    margin: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .box {
+    height: 80px;
+    width: 122px;
+    left: 25px;
+    position: relative;
+  }
+
+  
+  
+
+  .chart {
+    margin: 10px 0px;
+    top: 60px;
+    margin-left: 10px;
+  }
+
+  img {
+    display: none;
+}
+
+.bgimg{
+  background-image: url("/assets/img/Header-bg.svg");
+  height: 60px;
+  align-items: center;
+  z-index: -1;
+  border-bottom-left-radius: 30px;
+}
+
+
+
+.con{
+  position: relative;
+    top: 95px;
+    height: 32rem;
+}
+
+}

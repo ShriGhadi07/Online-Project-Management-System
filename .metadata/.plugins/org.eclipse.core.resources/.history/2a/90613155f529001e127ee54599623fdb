@@ -1,0 +1,44 @@
+package com.springRestAPI.springRestAPI.service;
+
+import java.util.List;
+
+import com.springRestAPI.springRestAPI.entities.techprimelab;
+
+
+public interface TechPrimeLabService {
+
+	techprimelab saveProject(techprimelab tech);
+	
+	List<techprimelab> getAllProject(Integer pageNumber,Integer pageSize ,String sortBy);
+	
+	techprimelab getProjectById(int p_id);
+	
+	techprimelab updateProject(techprimelab tech,int p_id);
+	
+	List<techprimelab> searchByPName(String pName);
+	
+	List<techprimelab> searchByReason(String reason);
+	
+	List<techprimelab> searchByType(String type);
+	
+	List<techprimelab> searchByDivision(String division);
+	
+	List<techprimelab> searchByCategory(String category);
+	
+	List<techprimelab> searchByPriority(String priority);
+	
+	List<techprimelab> searchByDepartment(String department);
+	
+	List<techprimelab> searchByStatus(String status);
+	
+	List<techprimelab> searchByLocation(String location);
+	
+	//List<techprimelab> searchByKeyword(String keyword);
+	
+}
+
+
+
+
+
+

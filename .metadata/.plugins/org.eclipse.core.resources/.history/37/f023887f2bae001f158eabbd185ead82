@@ -1,0 +1,41 @@
+/*
+ * Java classes are grouped in "packages". This allows them to be referenced and used in other
+ * classes using import statements.  Any class in this project is prefixed in the com.mockcompany.webapp
+ * package.
+ *
+ *   https://www.w3schools.com/java/java_packages.asp
+ *
+ * For general help with Java, see the tutorialspoint tutorial:
+ *
+ *   https://www.tutorialspoint.com/java/index.htm
+ */
+package com.mockcompany.webapp.controller;
+
+import com.mockcompany.webapp.model.ProductItem;
+import com.mockcompany.webapp.service.SearchService;
+
+/* The springframework package allows us to take advantage of the spring capabilities */
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+/* java.util package provides useful utilities */
+
+import java.util.Collection;
+
+
+
+@RestController
+public class SearchController {
+
+    
+	@Autowired
+    private SearchService searchService;
+
+    
+    @GetMapping("/api/products/search")
+    public Collection<ProductItem> search(@RequestParam("query") String query) {
+       return this.searchService.search(query);
+    }
+}

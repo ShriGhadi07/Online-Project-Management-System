@@ -1,0 +1,75 @@
+<p>add-project works!</p>
+<p>add-project works!</p>
+
+<form name="frmReg" #frmReg="ngForm" (ngSubmit)="save()">
+
+        
+              
+
+        <label class="lb">Project Name</label>
+        
+        <input type="text" name="pname" [(ngModel)]="regTech.pname" #pname="ngModel"  class="form-control" >
+
+        <div>
+                <label for="reason" class="lb">Reason</label>
+                <select name="reason" id="reason" [(ngModel)]="regTech.reason" #reason="ngModel">
+                  <option *ngFor="let r of Reason" [value]="r.value">{{ r.label }}</option>
+                </select>
+        </div>
+
+
+        <div>
+                <label for="type" class="lb">Type</label>
+                <select name="type" id="type" [(ngModel)]="regTech.type" #type="ngModel">
+                  <option *ngFor="let t of Type" [value]="t.value">{{ t.label }}</option>
+                </select>
+           </div>
+
+           <div>
+                <label for="division" class="lb">Division</label>
+                <select name="division" id="division" [(ngModel)]="regTech.division" #division="ngModel">
+                  <option *ngFor="let d of Division" [value]="d.value">{{ d.label }}</option>
+                </select>
+           </div>
+
+           <div>
+                <label for="category" class="lb">Category</label>
+                <select name="category" id="category" [(ngModel)]="regTech.category" #category="ngModel">
+                  <option *ngFor="let c of Category" [value]="c.value">{{ c.label }}</option>
+                </select>
+           </div>
+        
+           <div>
+                <label for="priority" class="lb">Priority</label>
+                <select name="priority" id="priority" [(ngModel)]="regTech.priority" #priority="ngModel">
+                  <option *ngFor="let p of Priority" [value]="p.value">{{ p.label }}</option>
+                </select>
+           </div>
+
+           <div>
+                <label for="department" class="lb">Department</label>
+                <select name="department" id="department" [(ngModel)]="regTech.department" #department="ngModel">
+                  <option *ngFor="let d of Department" [value]="d.value">{{ d.label }}</option>
+                </select>
+           </div>
+
+        <label class="lb">Start_Date</label>
+        <input type="date" name="start_date" [(ngModel)]="regTech.start_date" #start_date="ngModel"  class="form-control" >
+
+        <label class="lb">End_Date</label>
+        <input type="date" name="end_date" [(ngModel)]="regTech.end_date" #end_date="ngModel"  class="form-control" >
+
+        <div>
+                <label for="location" class="lb">Location</label>
+                <select name="location" id="location" [(ngModel)]="regTech.location" #location="ngModel">
+                  <option *ngFor="let l of Location" [value]="l.value">{{ l.label }}</option>
+                </select>
+        </div>
+
+        <label for="status" class="lb">Status:</label>
+        <b> Registerd</b> 
+       
+        
+<button type="submit">Save Project</button>
+
+</form>

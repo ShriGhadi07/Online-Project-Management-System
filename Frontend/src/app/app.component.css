@@ -1,0 +1,16 @@
+.common-sidebar{
+    display: flex;
+    justify-content: start;
+    
+}
+
+.components{
+    width: 100%;
+}
+/* @media (max-width: 768px) {
+    .components[_ngcontent-ng-c1767554486] {
+        width: 100%;
+        height: 60rem;
+    }
+} */
+

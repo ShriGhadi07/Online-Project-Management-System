@@ -1,0 +1,348 @@
+.bgimg{
+    background-image: url("/assets/img/Header-bg.svg");
+    height: 135px;
+    align-items: center;
+    z-index: -5;
+}
+
+img{
+    padding-left: 485px;
+    padding-top: 20px;
+}
+
+.search{
+    position: relative;
+    left: 0;
+    padding: 0px;
+    border-radius: 5px;
+    top: -10px;
+}
+
+.sorting {
+    position: absolute;
+    
+    right: 0;
+    padding: 5px;
+    border-radius: 5px;
+    top: 5px;
+  }
+
+  .inp{
+    height: 20%;
+  }
+
+  .con {
+    position: relative;
+    top: -1rem;
+    border: 2px solid #f3f8fb;
+    padding: 14px;
+    border-radius: 10px;
+    z-index: 3;
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+}
+
+
+table{
+    width: 100%;
+}
+
+thead{
+    background-color: #d1e7dd;
+}
+
+.Fistcol{
+   color: black;
+}
+
+.common{
+    color: slategrey;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.b{
+  display: none;
+}
+
+.button2 {
+    background: #f0f0f0;
+    background-image: -webkit-linear-gradient(top, #f0f0f0, #fafaff);
+    background-image: -moz-linear-gradient(top, #f0f0f0, #fafaff);
+    background-image: -ms-linear-gradient(top, #f0f0f0, #fafaff);
+    background-image: -o-linear-gradient(top, #f0f0f0, #fafaff);
+    background-image: linear-gradient(to bottom, #f0f0f0, #fafaff);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Georgia;
+    color: #a3c9e0;
+    font-size: 15px;
+    padding: 0px 5px 0px 5px;
+    border: solid #a3c9e0 2px;
+    text-decoration: none;
+  }
+  
+  .button2:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+  .button3 {
+    background: #f0f0f0;
+    background-image: -webkit-linear-gradient(top, #f0f0f0, #fafaff);
+    background-image: -moz-linear-gradient(top, #f0f0f0, #fafaff);
+    background-image: -ms-linear-gradient(top, #f0f0f0, #fafaff);
+    background-image: -o-linear-gradient(top, #f0f0f0, #fafaff);
+    background-image: linear-gradient(to bottom, #f0f0f0, #fafaff);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Georgia;
+    color: #a3c9e0;
+    font-size: 15px;
+    padding: 0px 5px 0px 5px;
+    border: solid #a3c9e0 2px;
+    text-decoration: none;
+  }
+  
+  .button3:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+  .button1 {
+    background: #066ac2;
+    background-image: -webkit-linear-gradient(top, #066ac2, #066ac2);
+    background-image: -moz-linear-gradient(top, #066ac2, #066ac2);
+    background-image: -ms-linear-gradient(top, #066ac2, #066ac2);
+    background-image: -o-linear-gradient(top, #066ac2, #066ac2);
+    background-image: linear-gradient(to bottom, #066ac2, #066ac2);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 0px 5px 0px 5px;
+    text-decoration: none;
+  }
+  
+  .button1:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+  .justify-content-center {
+    position: relative;
+    justify-content: center!important;
+    top: 10px;
+}
+  
+
+/* Responsive design*/
+@media (max-width: 768px) {
+  
+  .b{
+    display: flex;
+  }
+
+  img {
+      display: none;
+  }
+
+  .bgimg{
+    background-image: url("/assets/img/Header-bg.svg");
+    height: 60px;
+    align-items: center;
+    z-index: -1;
+    border-bottom-left-radius: 30px;
+}
+
+header{
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+
+  .con {
+      margin: 10px; 
+      padding: 10px;
+      top: 65px;
+      height: 98rem;
+  }
+
+  table {
+      font-size: 12px; 
+        font-size: 12px;
+        top: 15px;
+        position: relative;
+    
+  }
+
+  thead th {
+      font-size: 12px; 
+  }
+
+  .common,
+  .status {
+      font-size: 10px; 
+  }
+
+  .button1,
+  .button2,
+  .button3 {
+      font-size: 12px; 
+      padding: 2px 5px; 
+  }
+
+  
+  thead{
+    display: none;
+  }
+
+  tbody, tr, td{
+    display: block;
+    width: 100%;
+  }
+
+  tr{
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+   tbody tr td {
+    padding-left: 5%;
+    left: -40px;
+    color: rgb(3 7 18);
+    font-size: 600;
+    font-weight: 500;
+  }
+
+ td:before{
+    content: attr(data-label);
+    left: 50px;
+    text-align: left;
+
+  }
+
+  .button1,
+  .button2,
+  .button3 {
+    font-size: 12px;
+    padding: 2px 5px;
+  }
+  tbody,
+  tr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .pname{
+    left: 10px;
+  }
+
+#reason{
+  margin: 0;
+}
+#type{
+  margin: 0px;
+}
+
+#division{
+  margin: 0px;
+}
+#category{
+  margin-left: 100px;
+    margin-top: -65px;
+}
+#priority{
+  margin: 0px;
+}
+
+#department{
+  margin-left: 100px;
+    margin-top: -75px;
+}
+
+#status{
+  margin-left: 215px;
+  margin-top: -280px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#pname{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+/* Add spacing between buttons */
+.statusButton button {
+  margin-right: 35px;
+    position: relative;
+    left: 30px;
+    width: 50px;
+}
+
+
+*[_ngcontent-ng-c3572695218] {
+  
+  margin-bottom: 10px;
+  
+  box-sizing: border-box;
+}
+
+.log {
+  margin: 10px;
+}
+
+.sorting {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  border-radius: 5px;
+  top: -5px;
+}
+
+.search {
+  position: relative;
+  left: 5px;
+  padding: 0px;
+  border-radius: 5px;
+  top: -8px;
+}
+
+.border{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+}
+
+
+ 
